@@ -4,6 +4,7 @@ import App from "./App.tsx";
 import { NextUIProvider } from "@nextui-org/react";
 import "./index.css";
 import { ThemeProvider } from "./components/ThemeProvider.tsx";
+import TopHeader from "./components/TopHeader.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
