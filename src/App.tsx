@@ -1,9 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React, { Suspense } from "react";
-import { LazyLoading } from "./loaders";
 import Loading from "./loaders/Loading";
 
-const Home = React.lazy(() => LazyLoading(import("./Screens/Home") as any));
+const Home = React.lazy(() => import("./Screens/Home"));
 function App() {
   return (
     <Router>
