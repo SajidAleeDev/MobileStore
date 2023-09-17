@@ -1,6 +1,9 @@
 import {
+  ArrowLeft,
+  ArrowRight,
   BadgeDollarSign,
   MapPin,
+  MenuIcon,
   ShoppingCart,
   Truck,
   User,
@@ -12,4 +15,7 @@ export const icons = {
   Discount: BadgeDollarSign,
   User: User,
   Cart: ShoppingCart,
+  Menu: MenuIcon,
+  left: ArrowLeft,
+  Right: ArrowRight,
 };

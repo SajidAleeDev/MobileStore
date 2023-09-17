@@ -1,16 +1,27 @@
-import React from "react";
-import TopHeader from "@/components/TopHeader";
-import Header from "@/components/Header";
-import Menu from "@/components/Menu";
+import BigButton from "@/components/BigButton";
+import Carouse from "@/components/Carouse";
+import ProducProvider from "@/components/ProducProvider";
 
-function Home({ Children }: { Children: React.ReactNode }) {
+function Home() {
   return (
     <>
-      <TopHeader />
-      <Header />
-      <Menu />
-      {Children}
-      <div>footer</div>
+      <Carouse />
+      <BigButton />
+      <ProducProvider
+        NavigationTitle="/smartphones"
+        title="All Product"
+        Product
+      />
+      <ProducProvider
+        NavigationTitle="/smartphones"
+        title="Bill Payment"
+        BILLPayment
+      />
+      <ProducProvider
+        NavigationTitle="/Topcategories"
+        title="Top Categories"
+        TopCategories
+      />
     </>
   );
 }

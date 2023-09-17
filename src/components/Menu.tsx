@@ -6,8 +6,8 @@ function Menu() {
   const [active, setActive] = React.useState(0);
   const navigation = useNavigate();
   return (
-    <div className=" h-[69px] border-b-[0.2px]  ">
-      <div className=" container  flex items-center space-x-4 h-full ">
+    <div className=" hidden md:block h-[69px] border-b-[0.2px]  ">
+      <div className=" container   flex items-center space-x-4 h-full ">
         {DataMenu.map((item, index) => (
           <div
             key={item.id}

@@ -1,5 +1,3 @@
-import React from "react";
-import { icons } from "../icons/index";
 import { DataTopHeader } from "@/data/DataTopHeader";
 
 function TopHeader() {
