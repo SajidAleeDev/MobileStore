@@ -2,6 +2,8 @@ import {
   ArrowLeft,
   ArrowRight,
   BadgeDollarSign,
+  ChevronDown,
+  ChevronUp,
   MapPin,
   MenuIcon,
   ShoppingCart,
@@ -18,4 +20,6 @@ export const icons = {
   Menu: MenuIcon,
   left: ArrowLeft,
   Right: ArrowRight,
+  ViewMore: ChevronUp,
+  ViewLess: ChevronDown,
 };

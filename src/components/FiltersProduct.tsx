@@ -1,5 +1,6 @@
 import { useItemContext } from "@/providers/Context";
 import { useState } from "react";
+import { icons } from "../icons/index";
 
 interface Item {
   id: string;
@@ -23,10 +24,8 @@ function FiltersProduct({ filters }: Props) {
 
   const toggleCollapse = (itemId: string) => {
     if (collapsedItems.includes(itemId)) {
-      // Item is currently collapsed, so remove it from the list
       setCollapsedItems(collapsedItems.filter((id) => id !== itemId));
     } else {
-      // Item is currently expanded, so add it to the list
       setCollapsedItems([...collapsedItems, itemId]);
     }
   };
@@ -40,25 +39,30 @@ function FiltersProduct({ filters }: Props) {
       {filters.map((filter) => (
         <div key={filter.title} className={`flex flex-col space-y-4 `}>
           <h1
-            className={` text-2xl font-bold mb-2`}
+            className={` text-lg font-bold mb-2 flex items-center justify-between `}
             onClick={() => toggleCollapse(filter.id)}
           >
             {filter.title}
+            {collapsedItems.includes(filter.id) ? (
+              <icons.ViewMore />
+            ) : (
+              <icons.ViewLess />
+            )}
           </h1>
           <div
             className={`${
               collapsedItems.includes(filter.id) ? "hidden" : "flex"
             } overflow-hidden transition-all duration-500 ease-in-out
-            flex-col space-y-4 `}
+            flex-col space-y-4  `}
           >
             {filter.items.map((item) => (
-              <div key={item.id} className="flex items-center space-x-2">
+              <div key={item.id} className="flex items-center space-x-2 mt-2 ">
                 {filter.type === "Button" ? (
                   <button
                     type="button"
                     name={filter.title}
                     id={item.id}
-                    className="w-full h-8 rounded-full bg-blue-500 text-white hover:bg-blue-600  focus:outline-none"
+                    className="w-full text-left text-medium hover:font-bold focus:outline-none "
                     onClick={() => handleItemClick(item)}
                   >
                     {item.name}

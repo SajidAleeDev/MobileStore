@@ -136,52 +136,76 @@ export const SmartPhones = [
 ];
 export const DataSmartPhonesFilter = [
   {
-    id: Math.random().toString(),
+    id: crypto.randomUUID(),
     title: "Category",
-    type: "Button", // Corrected type value
+    type: "Button",
     items: [
       {
-        id: Math.random().toString(),
+        id: crypto.randomUUID(),
         name: "Mobile accessory",
       },
       {
-        id: Math.random().toString(),
+        id: crypto.randomUUID(),
         name: "Electronics",
       },
       {
-        id: Math.random().toString(),
+        id: crypto.randomUUID(),
         name: "Smartphones",
       },
       {
-        id: Math.random().toString(),
+        id: crypto.randomUUID(),
         name: "Modern tech",
       },
     ],
   },
   {
-    id: Math.random().toString(),
+    id: crypto.randomUUID(),
     title: "Brands",
     type: "Checkbox", // Corrected type value
     items: [
       {
-        id: Math.random().toString(),
+        id: crypto.randomUUID(),
         name: "Samsung",
       },
       {
-        id: Math.random().toString(),
+        id: crypto.randomUUID(),
         name: "Apple",
       },
       {
-        id: Math.random().toString(),
+        id: crypto.randomUUID(),
         name: "Huawei",
       },
       {
-        id: Math.random().toString(),
+        id: crypto.randomUUID(),
         name: "Pocco",
       },
       {
-        id: Math.random().toString(),
+        id: crypto.randomUUID(),
         name: "Lenovo",
+      },
+    ],
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "Condition",
+    type: "Radio", // Corrected type value
+    items: [
+      {
+        id: crypto.randomUUID(),
+        name: "All",
+      },
+      {
+        id: crypto.randomUUID(),
+
+        name: "Refurbished",
+      },
+      {
+        id: crypto.randomUUID(),
+        name: "Brand New",
+      },
+      {
+        id: crypto.randomUUID(),
+        name: "Old Used",
       },
     ],
   },
